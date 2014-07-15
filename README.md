@@ -1,4 +1,0 @@
-MyLeftEar
-=========
-
-Final project
