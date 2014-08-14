@@ -40,9 +40,13 @@ if(isset($_GET["url"])){
 			</div>
 			<div class="small-6 columns drop mobile-line-break">
 				<ul class="inline-list right move_icon_left">
-					<li><h6><a href="?url=login"><i class="fa fa-sign-in"></i>Login</a></h6></li>
-					<li><h6><a href="?url=register"><i class="fa fa-user"></i>Register</a></h6></li>
-					<li><h6><a href="?url=shopping_cart"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></h6></li>
+					<?php if (isset($auth_user)): ?>
+					<li>Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></li>
+					<?php else: ?>
+					<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?></h6></li>
+					<li><h6><?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
+					<?php endif; ?>
+					<li><h6><?= Html::anchor('cart', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
 				</ul>
 			</div>
 		</div>
@@ -95,7 +99,8 @@ if(isset($_GET["url"])){
 					<li <? echo ($action == 'patron') ? "class='active'" : ""; ?> ><a href="?url=patron">Patron</a></li>
 					<li <? echo ($action == 'blog') ? "class='active'" : ""; ?> ><a href="?url=blog">Blog</a></li>
 					<li <? echo ($action == 'location') ? "class='active'" : ""; ?> ><a href="?url=location">Location</a></li>
-					<li <? echo ($action == 'change_log') ? "class='active'" : ""; ?> ><a href="?url=change_log">Dev Change Log</a></li>
+					<!-- <li <? //echo ($action == 'change_log') ? "class='active'" : ""; ?> ><a href="change">Dev Change Log</a></li> -->
+					<li <? echo ($action == 'change_log') ? "class='active'" : ""; ?></li><?= Html::anchor('dev/change', 'Change Log') ?>
 
 				</ul>
 			</section>

@@ -1,20 +1,16 @@
-<?
-	// PRIMARY NAV.PHP
-?>
-
 <!DOCTYPE html>
 <html class="no-js" lang="en" >
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Front End</title>
+		<title><?= isset($title) ? $title : 'MyLeftEar' ?></title>
 		
 		<!-- CSS -->
 		<?php // echo Asset::css('normalize.css'); ?>
 
-		<?php echo Asset::css('foundation.css'); ?>
-		<?php echo Asset::css('social-buttons.css'); ?>
-		<?php echo Asset::css('main.css'); ?>
+		<?= Asset::css('foundation.css') ?>
+		<?= Asset::css('social-buttons.css') ?>
+		<?= Asset::css('main.css') ?>
 
 
 		<!-- Slick's CDN -->
@@ -25,9 +21,9 @@
 
 	</head>
 	<body>
-		<?php echo $header; ?>
-		<?php echo $content; ?>
-		<?php echo $footer; ?>
+		<?= $header ?>
+		<?= $content ?>
+		<?= $footer ?>
 
 	</body>
 </html>
