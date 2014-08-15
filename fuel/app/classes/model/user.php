@@ -12,7 +12,7 @@ class Model_User extends Auth\Model\Auth_User
 	 */
 	public function profile_url()
 	{
-		return 'artist/' . $this->username;
+		return 'user/' . $this->username;
 	}
 	
 	/**
@@ -21,5 +21,13 @@ class Model_User extends Auth\Model\Auth_User
 	public static function get_by_id($id)
 	{
 		return static::query()->where('id', $id)->get_one();
+	}
+
+	/**
+	 *
+	 */
+	public static function get_by($property, $value)
+	{
+		return static::query()->where($property, $value)->get_one();
 	}
 }

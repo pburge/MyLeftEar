@@ -13,8 +13,6 @@ class Controller_Main extends Controller_App
 	{
 		// $this->require_authentication();
 
-		
-
 		$this->template->content = View::forge('main/index');
 	}
 

@@ -41,10 +41,12 @@ if(isset($_GET["url"])){
 			<div class="small-6 columns drop mobile-line-break">
 				<ul class="inline-list right move_icon_left">
 					<?php if (isset($auth_user)): ?>
-					<li>Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></li>
+					<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></h6></li>
+					<li><h6><i class="fa fa-power-off"></i> <?= Html::anchor('logout', 'Logout') ?> </h6></li>
 					<?php else: ?>
 					<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?></h6></li>
 					<li><h6><?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
+
 					<?php endif; ?>
 					<li><h6><?= Html::anchor('cart', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
 				</ul>
@@ -59,7 +61,12 @@ if(isset($_GET["url"])){
 				</div>
 				<div class="mobile-drop">
 					<ul class="center mobile-bigger-font move_icon_left">
-						<li><h6><a href="?url=login"><i class="fa fa-sign-in"></i>Login</a> or <a href="?url=register">Register</a></h6></li>
+						<?php if (isset($auth_user)): ?>
+						<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></h6></li>
+						<li><h6><i class="fa fa-power-off"></i> <?= Html::anchor('logout', 'Logout') ?> </h6></li>
+						<?php else: ?>
+						<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?> or <?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
+						<?php endif; ?>
 					<li class="move_icon_left"><h6><a href="?url=shopping_cart"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></h6></li>
 					</ul>
 				</div>
@@ -77,9 +84,10 @@ if(isset($_GET["url"])){
 			<nav class="top-bar" data-topbar data-options="sticky_on: small">
 			<ul class="title-area">
 				<li class="name">
-<!-- 					NEEDS TO BE HERE TO KEEP PROPER SPACING FOR MOBILE VIEW-->
+					<!-- NEEDS TO BE HERE TO KEEP PROPER SPACING FOR MOBILE VIEW-->
 				</li>
-				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone. Keep it as is for now. -->
+				<!-- Remove the class "menu-icon" to get rid of menu icon. 
+				Take out "Menu" to just have icon alone. Keep it as is for now. -->
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 			</ul>
 			
@@ -92,6 +100,7 @@ if(isset($_GET["url"])){
 							<li <? echo ($action == 'product_painting') ? "class='active'" : ""; ?> ><a href="?url=product_painting">Paintings</a></li>
 							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="?url=product_prints">Prints</a></li>
 							<li <? echo ($action == 'product_photography') ? "class='active'" : ""; ?> ><a href="?url=product_photography">Photography</a></li>
+							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="?url=product_prints">Digital</a></li>
 						</ul>
 					</li>
 					<li <? echo ($action == 'commission') ? "class='active'" : ""; ?> ><a href="?url=commission">Commission Work</a></li>

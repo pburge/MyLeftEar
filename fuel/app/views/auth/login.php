@@ -9,10 +9,10 @@
 		<div class="small-8 columns">
 			<h1 class='text-center'>Login</h1>
 			<br>
-			<form>
-				<input id="regis_user" type="text" class="form-control" placeholder="username" autofocus>
-				<input id="regis_pass" type="password" class="form-control" placeholder="password">
-				<a href='#' id="regis_btn" class="button expand">Click to Login</a>
+			<?= Form::open(['id' => 'body_form']) ?>
+				<input type="text" name='username' class="form-control" placeholder="username" autofocus>
+				<input type="password" name='password' class="form-control" placeholder="password">
+				<input type='submit' class="button expand" value='Click to login'>
 				<div class="row">
 					<div class="small-12 columns">
 						<input id="checkbox1" type="checkbox">

@@ -12,4 +12,8 @@ class Controller_Dev extends Controller_App
 	{
 		$this->template->content = View::forge('change_log/change_log');
 	}
+	public function action_debug()
+	{
+		$this->template->content = View::forge('change_log/debug');
+	}
 }
