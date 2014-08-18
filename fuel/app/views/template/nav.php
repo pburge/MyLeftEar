@@ -1,7 +1,7 @@
 <?
 	// PRIMARY NAV.PHP
 
-if(isset($_GET["url"])){
+if(isset($_GET["/"])){
 	$action = $_GET["url"];
 }else{
 	$action = "";
@@ -46,9 +46,8 @@ if(isset($_GET["url"])){
 					<?php else: ?>
 					<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?></h6></li>
 					<li><h6><?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
-
 					<?php endif; ?>
-					<li><h6><?= Html::anchor('cart', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
+					<li><h6><?= Html::anchor('shop', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
 				</ul>
 			</div>
 		</div>
@@ -95,23 +94,22 @@ if(isset($_GET["url"])){
 				<!-- Drop-Down Sub Nav Section. Dropdown sub nav highlights only seem to work in mobile view. --> 
 				<ul class="left">
 					<li <? echo ($action == 'product_types' || $action == 'product_painting' || $action == 'product_prints' || $action == 'product_photography') ? "class='active has-dropdown'" : "class='has-dropdown'"; ?>>
-						<a href="?url=product_types">Product Types</a>
+						<a href="/product_types">Product Types</a>
 						<ul class="dropdown">
-							<li <? echo ($action == 'product_painting') ? "class='active'" : ""; ?> ><a href="?url=product_painting">Paintings</a></li>
-							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="?url=product_prints">Prints</a></li>
-							<li <? echo ($action == 'product_photography') ? "class='active'" : ""; ?> ><a href="?url=product_photography">Photography</a></li>
-							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="?url=product_prints">Digital</a></li>
+							<li <? echo ($action == 'product_painting') ? "class='active'" : ""; ?> ><a href="/product_painting">Paintings</a></li>
+							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="/product_prints">Prints</a></li>
+							<li <? echo ($action == 'product_photography') ? "class='active'" : ""; ?> ><a href="/product_photography">Photography</a></li>
+							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="/digital">Digital</a></li>
 						</ul>
 					</li>
-					<li <? echo ($action == 'commission') ? "class='active'" : ""; ?> ><a href="?url=commission">Commission Work</a></li>
-					<li <? echo ($action == 'artists') ? "class='active'" : ""; ?> ><a href="?url=artists">Artists</a></li>
-					<li <? echo ($action == 'patron') ? "class='active'" : ""; ?> ><a href="?url=patron">Patron</a></li>
-					<li <? echo ($action == 'blog') ? "class='active'" : ""; ?> ><a href="?url=blog">Blog</a></li>
-					<li <? echo ($action == 'location') ? "class='active'" : ""; ?> ><a href="?url=location">Location</a></li>
-					<!-- <li <? //echo ($action == 'change_log') ? "class='active'" : ""; ?> ><a href="change">Dev Change Log</a></li> -->
-					<li <? echo ($action == 'change_log') ? "class='active'" : ""; ?></li><?= Html::anchor('dev/change', 'Change Log') ?>
-
+					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/artists') ? "class='active'" : ""; ?>><?= Html::anchor('/artists','Artists')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/patron') ? "class='active'" : ""; ?>> <?= Html::anchor('/patron','Patron')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/blog') ? "class='active'" : ""; ?> id='blog'><?= Html::anchor('/blog','Blog')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/location') ? "class='active'" : ""; ?>><?= Html::anchor('/location','Location')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/dev/change') ? "class='active'" : ""; ?>> <?= Html::anchor('dev/change','Change Log')?></li>
 				</ul>
+
 			</section>
 			</nav>
 		</div>

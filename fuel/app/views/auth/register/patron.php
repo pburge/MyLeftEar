@@ -11,7 +11,7 @@
 
 		<div class="small-2 columns"><p></p></div>
 		<div class="small-8 columns">
-			<h1 class='text-center'>Welcome, Patron!</h1>
+			<h1 class='text-center'>Here is where one signs up to become a patron.</h1>
 			<br>
 			<form>
 				<input id="regis_user" type="text" class="form-control" placeholder="username" autofocus>

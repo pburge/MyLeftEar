@@ -81,6 +81,11 @@ class Controller_Auth extends Controller_App
 		}
 	}
 
+	public function get_patron()
+	{
+		$this->template->content = View::forge('auth/register/patron');
+	}
+
 	public function action_logout()
 	{
 		$this->auth->logout();

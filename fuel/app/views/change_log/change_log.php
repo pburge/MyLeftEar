@@ -8,6 +8,8 @@
 			This is the change log and additional notes page. This is just here for development purposes and to show a log of (almost) all changes.
 
 			Before MyLeftEar goes live, this section will probably be a private admin-only area or simply not implemented at all mainly due to everything being on GitHub. Not sure just yet.
+			<br><br>
+			<?= Html::anchor('/dev/debug','click here for debug')?>
 		</p>
 		<br>
 
