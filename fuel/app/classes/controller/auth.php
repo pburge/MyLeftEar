@@ -64,11 +64,6 @@ class Controller_Auth extends Controller_App
 				// handle error
 				Response::redirect('/#error-1');
 			}
-			elseif (! $this->auth->force_login($user_id))
-			{
-				// handle error
-				Response::redirect('/#error-2');
-			}
 			else
 			{
 				Response::redirect('/#success');
@@ -86,7 +81,7 @@ class Controller_Auth extends Controller_App
 		$this->template->content = View::forge('auth/register/patron');
 	}
 
-	public function action_logout()
+	public function get_logout()
 	{
 		$this->auth->logout();
 		Response::redirect('/#logged_out');

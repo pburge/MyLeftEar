@@ -47,7 +47,7 @@ if(isset($_GET["/"])){
 					<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?></h6></li>
 					<li><h6><?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
 					<?php endif; ?>
-					<li><h6><?= Html::anchor('shop', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
+					<li><h6><?= Html::anchor('cart', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
 				</ul>
 			</div>
 		</div>
@@ -93,13 +93,13 @@ if(isset($_GET["/"])){
 			<section class="top-bar-section">
 				<!-- Drop-Down Sub Nav Section. Dropdown sub nav highlights only seem to work in mobile view. --> 
 				<ul class="left">
-					<li <? echo ($action == 'product_types' || $action == 'product_painting' || $action == 'product_prints' || $action == 'product_photography') ? "class='active has-dropdown'" : "class='has-dropdown'"; ?>>
-						<a href="/product_types">Product Types</a>
+						<li <?=($_SERVER['REQUEST_URI'] == '/product/list' || $_SERVER['REQUEST_URI'] == '/product/paintings' || $_SERVER['REQUEST_URI'] == '/product/prints' || $_SERVER['REQUEST_URI'] == '/product/photography' || $_SERVER['REQUEST_URI'] == '/product/digital') ? "class='active has-dropdown'" : "class='has-dropdown'"; ?>>
+							<a href="/product/list">Product Types</a>
 						<ul class="dropdown">
-							<li <? echo ($action == 'product_painting') ? "class='active'" : ""; ?> ><a href="/product_painting">Paintings</a></li>
-							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="/product_prints">Prints</a></li>
-							<li <? echo ($action == 'product_photography') ? "class='active'" : ""; ?> ><a href="/product_photography">Photography</a></li>
-							<li <? echo ($action == 'product_prints') ? "class='active'" : ""; ?> ><a href="/digital">Digital</a></li>
+							<li <?=($_SERVER['REQUEST_URI'] == '/product/paintings') ? "class='active'" : ""; ?>><?= Html::anchor('product/paintings','Paintings')?></li>
+							<li <?=($_SERVER['REQUEST_URI'] == '/product/prints') ? "class='active'" : ""; ?>><?= Html::anchor('product/prints','Prints')?></li>
+							<li <?=($_SERVER['REQUEST_URI'] == '/product/photography') ? "class='active'" : ""; ?>><?= Html::anchor('product/photography','Photography')?></li>
+							<li <?=($_SERVER['REQUEST_URI'] == '/product/digital') ? "class='active'" : ""; ?>><?= Html::anchor('product/digital','Digital')?></li>
 						</ul>
 					</li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>

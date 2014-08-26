@@ -73,7 +73,7 @@ abstract class Controller_App extends Controller_Template
 	 */
 	private function _init_user()
 	{
-		if ($this->auth->check() and $user_id = $this->auth->get_user_id()[0])
+		if ($this->auth->check() and $user_id = $this->auth->get_user_id()[1])
 		{
 			$this->user = Model_User::get_by_id($user_id);
 		}

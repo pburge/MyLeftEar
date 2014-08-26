@@ -6,9 +6,9 @@
 
 class Controller_Location extends Controller_App
 {
-	public function get_location()
+	public function action_index()
 	{
-		$this->template->content = View::forge('location/location');
+		$this->template->content = View::forge('location/index');
 	}
 
 }

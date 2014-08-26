@@ -226,6 +226,7 @@
 		/*position: relative;*/
 		/*margin: 50px auto;*/
 	}
+	
 	.flip .card.flipped {
 		transform:rotatey(-180deg);
 		-ms-transform:rotatey(-180deg); /* IE 9 */
@@ -347,6 +348,8 @@
 		background-clip: padding-box; /* prevents bg color from leaking outside the border */
 		background-color: #000; /* layer fill content */
 	}
+
+	
 
 }
 

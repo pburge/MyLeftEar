@@ -8,10 +8,13 @@ return array(
 	'logout'   			=> 'auth/logout',
 	'patron'	 			=> 'auth/patron',
 	'profile/:username' 	=> 'profile/view',
-	'shop'				=> 'shop/shop', //<---- WHAT IS THIS BLACK MAGIC?! THIS ISN'T EVEN A PROPER DIRECTORY!
-
+	
 	'blog/:url' 			=> 'blog/view',
-	'artists' 			=> 'artist/artists',
-	'commissions' 			=> 'commission/commissions',
-	'location'    			=> 'location/location', 
+	'artist/:url'			=> 'artist/view',
+	'artists' 			=> 'artist/index',
+	'commissions' 			=> 'commission/index',
+	'location'               => 'location/index', 
+	
+
+
 );

@@ -5,14 +5,33 @@
  */
 class Model_User extends Auth\Model\Auth_User
 {
-
+	/**
+	 * 
+	 */
+	protected static $_has_one = array(
+	    'artist' => array(
+	        'key_from' => 'id',
+	        'model_to' => 'Model_Artist',
+	        'key_to' => 'user_id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
+	    'author' => array(
+	        'key_from' => 'id',
+	        'model_to' => 'Model_Blog_Post',
+	        'key_to' => 'user_id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
+	);
 
 	/**
 	 *
 	 */
 	public function profile_url()
 	{
-		return 'user/' . $this->username;
+		
+		return 'profile/' . $this->username;
 	}
 	
 	/**

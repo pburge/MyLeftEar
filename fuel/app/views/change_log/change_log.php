@@ -8,14 +8,43 @@
 			This is the change log and additional notes page. This is just here for development purposes and to show a log of (almost) all changes.
 
 			Before MyLeftEar goes live, this section will probably be a private admin-only area or simply not implemented at all mainly due to everything being on GitHub. Not sure just yet.
-			<br><br>
-			<?= Html::anchor('/dev/debug','click here for debug')?>
 		</p>
+		<hr>
 		<br>
+		<div>
+			<strong>Change Log and Notes - 8/20</strong>
+			<br><br>
+			
+			<p>So much has been done, yet so few changes can be seen. Let's just start off the top:</p>
 
+			&bull; First off, the backend, in terms of progress, is about 80% complete. There's still a lot left that needs to be done.
+			<br><br>
+			
+			&bull; The shopping cart, artist page, user profile, commissioned works page, product types page(s), patron login, and location page all need to be designed and configured.
+			<br><br>
+			
+			&bull; Users can register, login, and log out succesfully. As stated above, patron log in still needs to be configured. There needs to be a Terms of Service in place as well. I'm sure we'll figure that out in time. 
+			<br><br>
+			
+			&bull; The blog now reads from the database without any issues, but it's still not 100% done. The categories still need to be configured properly so it filters out any posts that don't <i>belong</i> to the selected category. I definitely feel a lot more can be done with it though.
+			<br><br>
+			
+			&bull; A few things regarding the front page: I've changed the featured works so they're now pictures "advertising" the work. Clicking it will take the user to the page where they can purchase it. A similar route was taken with the "other arts" underneath the slideshow.
+			<br><br>
+			
+<!-- 			
+			&bull;
+			<br><br>
+			
+			&bull;
+			<br><br> -->
+
+		</div>
+		<hr>
 		<div>
 			<strong>Change Log and Notes - 8/7</strong>
 			<br><br>
+			
 			&bull; Since most of the front end is complete, I will start porting code over to FuelPHP. The fun stuff begins!
 			<br><br>	
 
@@ -51,7 +80,7 @@
 			&bull; Finally replaced those ultra lame carousel placeholders with actual art pieces. Granted I had to resize them to fit a little better, so they're a *tiny* bit stretched. I feel the suggested dimensions should be 800x400. We can increase the width up to 1000px in width. Anything more would be overkill and anything less would look awkward. Mobile keeps these featured pieces and throws them into 3 sections, each with their own description (if necessary). I'll work more on that carousel though. It seems to be lacking something, but I can't quite put my finger on it just yet.
 			<br><br>
 
-			&bull; Oh yeah, remember that 3x1 idea that was mentioned last week? Well here's my take on it. You can view it <a href="?url=temporary">here.</a>
+			&bull; <del>Oh yeah, remember that 3x1 idea that was mentioned last week? Well here's my take on it. You can view it <a href="#">here.</a> </del>
 			<br><br>
 
 			&bull; A few tweaks here and there, but nothing really worth mentioning.

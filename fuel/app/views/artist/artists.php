@@ -1,1 +1,0 @@
-<h1>artists.php</h1>

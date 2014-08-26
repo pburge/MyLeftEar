@@ -11,8 +11,6 @@ class Controller_Blog extends Controller_App
 
 		$this->template->content->posts = $posts;
 
-
-		
 	}
 
 	public function get_view()

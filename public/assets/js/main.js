@@ -1,6 +1,9 @@
 $(document).ready(function() {
- 	$(document).foundation();
 
+	// foundation init   
+	$(document).foundation();
+
+	// carousel
 	$('.carousel').slick({
 		swipe: false,
 		touchMove: false,
@@ -10,40 +13,10 @@ $(document).ready(function() {
 		speed: 600
 	});
 
-
-	$('.temp-show').slick({
-	  centerMode: true,
-	  autoplay: true,
-	  dots: true,
-	  centerPadding: '60px',
-	  slidesToShow: 3,
-	  responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        arrows: false,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 3
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        arrows: false,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
-	});
-
-	/* card flip */
+	// card flippy
 	$(".flip").hover(function(){
-	  $(this).find(".card").toggleClass("flipped");
-	  return false;
+		$(this).find(".card").toggleClass("flipped");
+		return false;
 	});
 
 });
-

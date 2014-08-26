@@ -3,8 +3,8 @@
 class Controller_Commission extends Controller_App
 {
 
-	public function action_commissions()
+	public function action_index()
 	{
-		$this->template->content = View::forge('commission/commissions');
+		$this->template->content = View::forge('commission/index');
 	}
 }

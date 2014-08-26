@@ -27,6 +27,5 @@
 	<?php echo Asset::js('foundation.min.js'); ?>
 	<?php echo Asset::js('modernizr.js'); ?>
 	<?php echo Asset::js('main.js'); ?>
-	
 </body>
 </html>

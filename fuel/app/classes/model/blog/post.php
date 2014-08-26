@@ -10,6 +10,18 @@ class Model_Blog_Post extends Orm\Model
 		'title',
 		'body',
 		'created_at',
+		'category',
+		'post_img',
+	);
+
+	protected static $_belongs_to = array(
+	    'author' => array(
+	        'key_from' => 'user_id',
+	        'model_to' => 'Model_User',
+	        'key_to' => 'id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
 	);
 
 	protected static $_observers = array(
