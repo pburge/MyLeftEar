@@ -10,8 +10,9 @@ return array(
 	'profile/:username' 	=> 'profile/view',
 	
 	'blog/:url' 			=> 'blog/view',
-	'artist/:url'			=> 'artist/view',
-	'artists' 			=> 'artist/index',
+	'artists' 			=> 'artists/index',
+	'artist/:url/:piece'	=> 'artist/view',
+	'artist/:url'			=> 'artist/index',
 	'commissions' 			=> 'commission/index',
 	'location'               => 'location/index', 
 	

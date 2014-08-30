@@ -26,6 +26,23 @@ class Model_Artist extends Orm\Model
 	        'cascade_save' => true,
 	        'cascade_delete' => false,
 	    ),
+	    'piece' => array(
+	        'key_from' => 'user_id',
+	        'model_to' => 'Model_User',
+	        'key_to' => 'id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
+	);
+
+	protected static $_has_many = array(
+	    'pieces' => array(
+	        'key_from' => 'id',
+	        'model_to' => 'Model_Piece',
+	        'key_to' => 'artist_id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
 	);
 
 	/**
@@ -45,6 +62,32 @@ class Model_Artist extends Orm\Model
 	public function url()
 	{
 		return 'artist/' . $this->user->username;
+	}
+
+
+
+	/**
+	 * @return Orm\Query
+	 */
+	protected function query_pieces()
+	{
+		return Model_Piece::query()->where('artist_id', $this->id);
+	}
+
+
+	public function get_piece_by_uid($uid)
+	{
+		return $this->query_pieces()->where('uid', $uid)->get_one();
+	}
+
+	public function get_pieces()
+	{
+		return $this->query_pieces()->get();
+	}
+
+	public function get_recent_pieces()
+	{
+		return $this->query_pieces()->order_by('created_at', 'desc')->get();
 	}
 
 	/**

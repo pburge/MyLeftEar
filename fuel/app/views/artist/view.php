@@ -1,94 +1,87 @@
-<?
-
-?>
-
 <!-- <h1>artist/view.php</h1> -->
+
 <div class="row">
 	<div class="large-12 columns">
-	 
 		<div class="row">
-		 
-			<div class="large-4 small-12 columns show-for-small-only">
-				<img src="http://placehold.it/970x300&amp;text=Avatar">
-				<div class="panel">
-					<h3><?= $artist->user->username ?></h3>
-				</div>
-			</div> 
-
+			<div class="small-12 columns show-for-small-only">
+				<img src="http://placehold.it/970x500&text=Image"><br>
+			</div>
 			<div class="small-12 columns show-for-medium-only">
-				<img src="http://placehold.it/970x300&amp;text=Avatar">
-				<div class="panel">
-					<h3><?= $artist->user->username ?></h3>
-					<h6 class="subheader">stuff jidowajdiow;jdioaw;jda</h6>
+				<img src="http://placehold.it/970x400&text=Image"><br>
+			</div>
+			<div class="large-8 columns show-for-large-up">
+				<img src="http://placehold.it/700x500&text=Image">
+			</div>
+			<div class="large-4 columns">
+				<div class="show-for-small-only">
+					<br>
 				</div>
-			</div> 
-
-			<div class="large-4 small-12 columns show-for-large-up">
-				<img src="http://placehold.it/470x440&amp;text=Avatar">
+				<div class="show-for-medium-only">
+					<br>
+				</div>
 				<div class="panel">
-					<h2><?= $artist->user->username ?></h2>
-					<h6 class="subheader">stuff about artist here</h6>
+					<h3 class=""><?= $piece->name ?><hr/></h3>
+					<!-- <h2 class="">Aquagalactic Subplanetary<hr/></h2> -->
+					<!-- <h3 class="">I am Johnny Cash<hr/></h3> -->
+					<h5 class="subheader">Info about the piece here.</h5>
+					<ul>
+						<li>Place holder stuff.</li>
+						<li>Place holder stuff.</li>
+						<li>Place holder stuff.</li>
+						<li>Place holder stuff.</li>
+						<li>Place holder stuff.</li>
+						<li>Place holder stuff.</li>
+					</ul>
+					<h6 class="subheader">Price or something</h6>
+					<h6 class="">$<?= $piece->price ?> USD</h6>
+
+					<a href="#" class="small button large-12">Buy now!</a>
+				</div>
+<!-- 				<div class="row">
+					<div class="large-12 columns">
+						<div class="panel">
+							<h6 class="subheader">Price or something</h6>
+							<h6 class="subheader large-push-10"><?= $piece->price ?></h6>
+
+							<a href="#" class="small button">Buy now!</a>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h3>More from this artist:</h3>
+			</div>
+			<div class="large-3 small-6 columns">
+				<a href="" title=""><img src="http://placehold.it/500x500&text=Thumbnail"></a>
+				<div class="panel">
+					<p>Description</p>
 				</div>
 			</div>
-
-			<div class="large-8 columns">
-				<div class="row">
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-					<div class="large-4 small-6 columns">
-						<a href="#" title="thumbnail">
-							<img src="http://placehold.it/500x500&amp;text=Thumbnail">
-						</a>
-						<div class="panel">
-						<h5>Item Name</h5>
-						<h6 class="subheader">$000.00</h6>
-						</div>
-					</div>
-				</div> 
+			<div class="large-3 small-6 columns">
+				<a href="" title=""><img src="http://placehold.it/500x500&text=Thumbnail"></a>
+				<div class="panel">
+					<p>Description</p>
+				</div>
 			</div>
-		</div> 
+			<div class="large-3 small-6 columns">
+				<a href="" title=""><img src="http://placehold.it/500x500&text=Thumbnail"></a>
+				<div class="panel">
+					<p>Description</p>
+				</div>
+			</div>
+			<div class="large-3 small-6 columns">
+				<a href="" title=""><img src="http://placehold.it/500x500&text=Thumbnail"></a>
+				<div class="panel">
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+
 	</div>
+
 </div>
+<!-- <pre><?= var_export($piece); ?></pre> -->
