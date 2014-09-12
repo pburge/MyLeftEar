@@ -1,0 +1,1 @@
+admin/new_post.php

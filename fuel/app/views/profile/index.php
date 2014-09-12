@@ -2,8 +2,8 @@
 	<aside class="large-3 medium-4 small-12 columns">
 		<h5>User Options</h5>
 		<ul class="side-nav">
-			<li class='active'><a href="#">Account settings</a></li>
-			<li><a href="#">Become a Patron</a></li>
+			<li class='active'><?= Html::anchor('profile', 'Name Settings') ?></li>
+			<li><?= Html::anchor('profile/patron', 'Become a Patron') ?></li>
 		</ul>
 	</aside>
  	<div class="large-1 medium-1"></div>
@@ -28,23 +28,13 @@
 					</label>
 				</div>
 			</fieldset>
-		</form>
-		<form>
 			<fieldset>
 				<legend>Email Settings</legend>
-<!-- 				<div class="row">
-					<div class="large-6 columns">
-						<label>Preferred prefix:</label>
-						<input name="checkbox1" type="checkbox"><label for="checkbox1">Mr.</label>
-						<input name="checkbox1" type="checkbox"><label for="checkbox1">Ms.</label>
-						<input name="checkbox1" type="checkbox"><label for="checkbox1">Mrs.</label>
-					</div>
-				</div> -->
 				<div class="row">
 					<label class="large-12 medium-12 small-12 columns">Current Email:
-						<input type="text" disabled>
+						<input type="text" disabled value='<?= $auth_user->email ?>'>
 					</label>
-					<label class="large-12 medium-12 small-12 columns">Updated Email:
+					<label class="large-12 medium-12 small-12 columns">Updated Email (if applicable):
 						<input type="text">
 					</label>
 				</div>
@@ -58,4 +48,4 @@
  <br>
  <br>
  <br>
-<!-- <hr> <pre><?= var_export($profile_user); ?></pre> -->
+ <hr> <pre><?= var_export($auth_user); ?></pre>

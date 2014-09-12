@@ -23,6 +23,13 @@ class Model_User extends Auth\Model\Auth_User
 	        'cascade_save' => true,
 	        'cascade_delete' => false,
 	    ),
+	    'admin' => array(
+	        'key_from' => 'id',
+	        'model_to' => 'Model_Admin',
+	        'key_to' => 'user_id',
+	        'cascade_save' => true,
+	        'cascade_delete' => false,
+	    ),
 	);
 
 	
@@ -31,10 +38,10 @@ class Model_User extends Auth\Model\Auth_User
 	 */
 	public function profile_url()
 	{
-		
 		return 'profile/' . $this->username;
 	}
-	
+
+
 	/**
 	 *
 	 */

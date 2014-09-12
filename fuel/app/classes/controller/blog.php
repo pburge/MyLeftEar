@@ -5,7 +5,7 @@ class Controller_Blog extends Controller_App
 
 	public function get_index()
 	{
-		$posts = Model_Blog_Post::query()->get();
+		$posts = Model_Blog_Post::query()->order_by('created_at', 'desc')->get();
 
 		$this->template->content = View::forge('blog/index');
 

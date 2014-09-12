@@ -1,5 +1,9 @@
 <?
-// $_SERVER['REQUEST_URI'] = '/dev/debug';
-// $url = $_SERVER['REQUEST_URI'];
+	$num = 0;
+
+	while ($num < 10) {
+		echo $num += 1;
+		echo '<br>';
+	}
 ?>
 

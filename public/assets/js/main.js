@@ -19,4 +19,8 @@ $(document).ready(function() {
 		return false;
 	});
 
+	document.getElementById("uploadBtn").onchange = function () {
+	    document.getElementById("uploadFile").value = this.value;
+	};
+
 });

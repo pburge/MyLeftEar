@@ -14,6 +14,7 @@ abstract class Controller_App extends Controller_Template
 	 *
 	 */
 	protected $user = null;
+	protected $admin = null;
 
 	/**
 	 *
@@ -24,6 +25,7 @@ abstract class Controller_App extends Controller_Template
 
 		$this->_init_auth();
 		$this->_init_user();
+		$this->_init_admin();
 
 		$this->init_template();		
 	}
@@ -35,6 +37,15 @@ abstract class Controller_App extends Controller_Template
 	{
 		return $this->user !== null;
 	}
+
+	/**
+	 * @return bool
+	 */
+	protected function is_admin()
+	{
+		return $this->admin !== null;
+	}
+
 
 	/**
 	 * rediect user to login page if not authenticated
@@ -76,6 +87,17 @@ abstract class Controller_App extends Controller_Template
 		if ($this->auth->check() and $user_id = $this->auth->get_user_id()[1])
 		{
 			$this->user = Model_User::get_by_id($user_id);
+		}
+	}
+
+	/**
+	 *
+	 */
+	private function _init_admin()
+	{
+		if ($this->is_authenticated())
+		{
+			$this->admin = Model_Admin::get_by('user_id', $this->user->id);
 		}
 	}
 }

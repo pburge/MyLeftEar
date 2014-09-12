@@ -33,15 +33,19 @@ if(isset($_GET["/"])){
 <body>
 	<header> 
 		<div class="row show-for-medium-up">
-			<div class="small-6 columns logo">
+			<div class="large-6 medium-3 small-6 columns logo">
 				<h1 class="bigger-h1-font mobile-bigger-h1">
 					<a href="/">MY<span class='red'>LEFT</span>EAR</a>
 				</h1>
 			</div>
-			<div class="small-6 columns drop mobile-line-break">
+			<div class="large-6 medium-9 small-6 columns drop mobile-line-break">
 				<ul class="inline-list right move_icon_left">
 					<?php if (isset($auth_user)): ?>
-					<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></h6></li>
+						<? if ($auth_user->group_id == 3) :?>
+							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('profile', $auth_user->username) ?></h6></li>
+						<? elseif($auth_user->group_id == 6) : ?>
+							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('admin', $auth_user->username) ?></h6></li>
+						<? endif ; ?>
 					<li><h6><i class="fa fa-power-off"></i> <?= Html::anchor('logout', 'Logout') ?> </h6></li>
 					<?php else: ?>
 					<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?></h6></li>
@@ -61,7 +65,11 @@ if(isset($_GET["/"])){
 				<div class="mobile-drop">
 					<ul class="center mobile-bigger-font move_icon_left">
 						<?php if (isset($auth_user)): ?>
-						<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor($auth_user->profile_url(), $auth_user->username) ?></h6></li>
+						<? if ($auth_user->group_id == 3) :?>
+							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('profile', $auth_user->username) ?></h6></li>
+						<? elseif($auth_user->group_id == 6) : ?>
+							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('admin', $auth_user->username) ?></h6></li>
+						<? endif ; ?>
 						<li><h6><i class="fa fa-power-off"></i> <?= Html::anchor('logout', 'Logout') ?> </h6></li>
 						<?php else: ?>
 						<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?> or <?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
@@ -105,10 +113,10 @@ if(isset($_GET["/"])){
 
 					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/artists') ? "class='active'" : ""; ?>><?= Html::anchor('/artists','Artists')?></li>
-					<li <?=($_SERVER['REQUEST_URI'] == '/patron') ? "class='active'" : ""; ?>> <?= Html::anchor('/patron','Patron')?></li>
+					<!-- <li <?=($_SERVER['REQUEST_URI'] == '/patron') ? "class='active'" : ""; ?>> <?= Html::anchor('/patron','Patron')?></li> -->
 					<li <?=($_SERVER['REQUEST_URI'] == '/blog') ? "class='active'" : ""; ?> id='blog'><?= Html::anchor('/blog','Blog')?></li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/location') ? "class='active'" : ""; ?>><?= Html::anchor('/location','Location')?></li>
-					<li <?=($_SERVER['REQUEST_URI'] == '/dev/change') ? "class='active'" : ""; ?>> <?= Html::anchor('dev/change','Change Log')?></li>
+					<!-- <li <?=($_SERVER['REQUEST_URI'] == '/dev/change') ? "class='active'" : ""; ?>> <?= Html::anchor('dev/change','Change Log')?></li> -->
 
                          
 				</ul>

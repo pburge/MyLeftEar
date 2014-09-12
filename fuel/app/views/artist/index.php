@@ -37,27 +37,15 @@
 				<div class="row">
 					<!-- <div class="large-4 small-6 columns"> -->
 
-
-
 						<?php foreach($artist->get_recent_pieces() as $piece) : ?>
-
-
 							<div class="large-4 small-6 columns">
-								<?= Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats/Thumbnail'))?>
-								<!-- http://lorempixel.com/500/500/cats -->
+								<?= Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats'))?>
 								<div class="panel">
 									<h5>Item Name</h5>
 									<h6 class="subheader">$000.00</h6>
 								</div>
 							</div>
-
-
-
 						<?php endforeach; ?>
-
-
-
-
 
 					<!-- </div> -->
 

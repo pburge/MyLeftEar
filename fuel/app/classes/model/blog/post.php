@@ -45,10 +45,17 @@ class Model_Blog_Post extends Orm\Model
 		return 'blog/' . $this->url;
 	}
 
+	public static function get_desc($property,$value)
+	{
+		return static::query()->where($property, $value)->order_by('created_at', 'desc');
+	}
 
 	public static function get_by($property, $value)
 	{
 		return static::query()->where($property, $value)->get_one();
 	}
+
+
+
 }
 

@@ -5,10 +5,7 @@
  */
 class Controller_Auth extends Controller_App
 {
-	/**
-	 * The basic welcome message
-	 *
-	 */
+
 	public function get_register()
 	{
 		$this->template->content = View::forge('auth/register/user');
@@ -36,7 +33,7 @@ class Controller_Auth extends Controller_App
 			}
 			else
 			{
-				Response::redirect('/#success');
+				Response::redirect('/');
 			}
 		}
 		catch (SimpleUserUpdateException $e)
@@ -62,11 +59,12 @@ class Controller_Auth extends Controller_App
 			if (! $user_id = $this->auth->login($username, $password))
 			{
 				// handle error
-				Response::redirect('/#error-1');
+				Response::redirect('/login');
+				echo '<p>bad username or password</p>';
 			}
 			else
 			{
-				Response::redirect('/#success');
+				Response::redirect('/');
 			}
 		}
 		catch (SimpleUserUpdateException $e)
@@ -84,7 +82,7 @@ class Controller_Auth extends Controller_App
 	public function get_logout()
 	{
 		$this->auth->logout();
-		Response::redirect('/#logged_out');
+		Response::redirect('/');
 	}
 
 }
