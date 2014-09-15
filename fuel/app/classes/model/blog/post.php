@@ -12,6 +12,7 @@ class Model_Blog_Post extends Orm\Model
 		'created_at',
 		'category',
 		'post_img',
+		'published',
 	);
 
 	protected static $_belongs_to = array(
@@ -39,10 +40,24 @@ class Model_Blog_Post extends Orm\Model
 	            'unique' => true,     // property to require uniqueness or not
 	        ),
 	);
+	public function blog()
+	{
+		return 'blog';
+	}
 
 	public function url()
 	{
 		return 'blog/' . $this->url;
+	}
+
+	public function edit_url()
+	{
+		return 'edit/' . $this->url;
+	}
+
+	public function delete_url()
+	{
+		return 'delete/' . $this->url;
 	}
 
 	public static function get_desc($property,$value)
@@ -54,6 +69,19 @@ class Model_Blog_Post extends Orm\Model
 	{
 		return static::query()->where($property, $value)->get_one();
 	}
+
+	public function publish($property, $value, $update)
+	{
+		$entry = query()->where($property, $value)->find($update);
+		$entry->published = 1;
+		$entry->save();
+	}
+
+	// public static function save()
+	// {
+	// 	return 'blog';
+
+	// }
 
 
 

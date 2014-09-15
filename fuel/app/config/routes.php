@@ -8,7 +8,11 @@ return array(
 	'logout'   			          => 'auth/logout',
 	'profile' 	                    => 'profile/index',
 	'profile/patron'               	=> 'profile/patron',
+
 	'blog/:url' 			          => 'blog/view',
+	'edit/:url'					=> 'blog/edit',
+	'delete/:url'					=> 'blog/delete',
+	
 	'artists' 			          => 'artists/index',
 	'artist/:url/:piece'	          => 'artist/view',
 	'artist/:url'			          => 'artist/index',

@@ -13,7 +13,7 @@
 						<div class="signInBox">
 							<h2 class='signInHeader'>Register free today!</h2>
 							<ul class='signInText'>
-								<li>Place holder stuff...</li>
+								<li>Place holder stuff.</li>
 								<li>Place holder stuff.</li>
 								<li>Place holder stuff.</li>
 								<li>Place holder stuff.</li>
@@ -21,7 +21,7 @@
 								<li>Place holder stuff.</li>
 							</ul>
 						</div>
-						<div class="signInBox" style="border-right:none;"> <!-- to "close" the box, this needs to be here. -->
+						<div class="signInBox" style="border-right:none;"> <!-- to "close" the "box", this needs to be here. -->
 							<br>
 							<?= Form::open(['id' => 'body_form']) ?>
 								<input name='email' type="email" class="form-control" placeholder="email" autofocus>
