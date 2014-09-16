@@ -9,23 +9,6 @@
   }
 }
 
-.fileUpload {
-	position: relative;
-	overflow: hidden;
-	margin: 10px;
-}
-.fileUpload input.upload {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
-}
-
 /*Small screens*/
 @media only screen { /* Define mobile styles */
 	body{
@@ -54,9 +37,6 @@
 		margin-right: 3px;
 		width:25px;
 		height: 25px;
-	}
-	.black-icons > li > a > i {
-		color: black;
 	}
 
 	.border-no-hr{
@@ -93,6 +73,29 @@
 	}
 	.h-center{
 		text-align: center;
+	}
+	.footer{
+		padding: 50px;
+		background-color: #222;
+	}
+
+	.footer a{
+		font-size: 15px;
+		color: #fff;
+	}
+
+	.footer h4{
+		color: #666;
+		border-bottom: thick solid #555;
+	}
+
+	.icon-color > li > i {
+		color: #fff;
+	}
+
+	.icon-color > li > i > a{
+		font-size: 15px;
+		color: #fff;
 	}
 }
 
@@ -175,12 +178,48 @@
 		text-align: justify; 
 		width: 300px;
 	}
+	.footer{
+		padding-top: 50px;
+		background-color: #222;
+	}
+
+	.footer a{
+		font-size: 15px;
+		color: #fff;
+	}
+
+	.footer a:hover{
+		color: #000;
+	}
+
+	.footer h4{
+		color: #666;
+		border-bottom: thick solid #555;
+	}
+
+	.footer h4:hover{
+		border-bottom: thick solid #000;
+	}
+
+	.icon-color > li > i {
+		color: #fff;
+	}
+
+	.icon-color > li > i > a{
+		font-size: 15px;
+		color: #fff;
+	}
 }
 
 /*Large screens*/
 @media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
 	body{
 		background-color: white;
+	}
+
+	.inverse{
+		background: #333;
+		color: #fff;
 	}
 
 	.red{
@@ -193,10 +232,6 @@
 	.raise{
 		margin-top: -20px;
 	}
-	.black-icons > li > a > i {
-		color: black;
-	}
-
 	.shop_icon_resize{
 		margin-top: -5px;
 		margin-right: 3px;
@@ -231,72 +266,6 @@
 
 	.carousel-drop {
    		margin-bottom: 0px;
-	}
-
-	.flip {
-		-webkit-perspective: 800;
-		-ms-perspective: 800;
-		-moz-perspective: 800;
-		-o-perspective: 800;
-		width: 220px;
-		height: 275px;
-		/*position: relative;*/
-		/*margin: 50px auto;*/
-	}
-	
-	.flip .card.flipped {
-		transform:rotatey(-180deg);
-		-ms-transform:rotatey(-180deg); /* IE 9 */
-		-moz-transform:rotatey(-180deg); /* Firefox */
-		-webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-		-o-transform:rotatey(-180deg); /* Opera */
-	}
-	.flip .card {
-		width: 100%;
-		height: 100%;
-		-webkit-transform-style: preserve-3d;
-		-webkit-transition: 0.5s;
-		-moz-transform-style: preserve-3d;
-		-moz-transition: 0.5s;
-		-ms-transform-style: preserve-3d;
-		-ms-transition: 0.5s;
-		-o-transform-style: preserve-3d;
-		-o-transition: 0.5s;
-		transform-style: preserve-3d;
-		transition: 0.5s;
-	}
-	.flip .card .face {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: 2;
-		font-family: Georgia;
-		font-size: 1em;
-		/*text-align: center;*/
-		/*line-height: 200px;*/
-		backface-visibility: hidden;  /* W3C */
-		-webkit-backface-visibility: hidden; /* Safari & Chrome */
-		-moz-backface-visibility: hidden; /* Firefox */
-		-ms-backface-visibility: hidden; /* Internet Explorer */
-		-o-backface-visibility: hidden; /* Opera */
-
-	}
-	.flip .card .front {
-		position: absolute;
-		z-index: 1;
-		/*background: red;*/
-		/*color: red;*/
-		cursor: pointer;
-	}
-	.flip .card .back {
-		background: Gainsboro;
-		color: black;
-		cursor: pointer;
-		transform:rotatey(-180deg);
-		-ms-transform:rotatey(-180deg); /* IE 9 */
-		-moz-transform:rotatey(-180deg); /* Firefox */
-		-webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-		-o-transform:rotatey(-180deg); /* Opera */
 	}
 
 	.signInWrapper{
@@ -366,7 +335,38 @@
 		background-color: #000; /* layer fill content */
 	}
 
-	
+	.footer{
+		padding-top: 50px;
+		background-color: #222;
+	}
+
+	.footer a{
+		font-size: 15px;
+		color: #fff;
+	}
+
+	.footer a:hover{
+		color: #000;
+	}
+
+	.footer h4{
+		color: #666;
+		border-bottom: thick solid #555;
+	}
+
+	.footer h4:hover{
+		border-bottom: thick solid #000;
+	}
+
+	.icon-color > li > i {
+		color: #fff;
+	}
+
+	.icon-color > li > i > a{
+		font-size: 15px;
+		color: #fff;
+	}
+
 
 }
 

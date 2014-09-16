@@ -100,24 +100,12 @@ if(isset($_GET["/"])){
 			
 			<section class="top-bar-section">
 				<!-- Drop-Down Sub Nav Section. Dropdown sub nav highlights only seem to work in mobile view. --> 
-				<ul class="left"><!-- 
-						<li <?=($_SERVER['REQUEST_URI'] == '/product/list' || $_SERVER['REQUEST_URI'] == '/product/paintings' || $_SERVER['REQUEST_URI'] == '/product/prints' || $_SERVER['REQUEST_URI'] == '/product/photography' || $_SERVER['REQUEST_URI'] == '/product/digital') ? "class='active has-dropdown'" : "class='has-dropdown'"; ?>>
-							<a href="/product/list">Product Types</a>
-						<ul class="dropdown">
-							<li <?=($_SERVER['REQUEST_URI'] == '/product/paintings') ? "class='active'" : ""; ?>><?= Html::anchor('product/paintings','Paintings')?></li>
-							<li <?=($_SERVER['REQUEST_URI'] == '/product/prints') ? "class='active'" : ""; ?>><?= Html::anchor('product/prints','Prints')?></li>
-							<li <?=($_SERVER['REQUEST_URI'] == '/product/photography') ? "class='active'" : ""; ?>><?= Html::anchor('product/photography','Photography')?></li>
-							<li <?=($_SERVER['REQUEST_URI'] == '/product/digital') ? "class='active'" : ""; ?>><?= Html::anchor('product/digital','Digital')?></li>
-						</ul>
-					</li> -->
-
-					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>
+				<ul class="left">
+					<li <?=($_SERVER['REQUEST_URI'] == '/product/list') ? "class='active'" : "";?>><?= Html::anchor('product/list','Types of Art')?></li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/artists') ? "class='active'" : ""; ?>><?= Html::anchor('/artists','Artists')?></li>
-					<!-- <li <?=($_SERVER['REQUEST_URI'] == '/patron') ? "class='active'" : ""; ?>> <?= Html::anchor('/patron','Patron')?></li> -->
-					<li <?=($_SERVER['REQUEST_URI'] == '/blog') ? "class='active'" : ""; ?> id='blog'><?= Html::anchor('/blog','Blog')?></li>
-					<li <?=($_SERVER['REQUEST_URI'] == '/location') ? "class='active'" : ""; ?>><?= Html::anchor('/location','Location')?></li>
-					<!-- <li <?=($_SERVER['REQUEST_URI'] == '/dev/change') ? "class='active'" : ""; ?>> <?= Html::anchor('dev/change','Change Log')?></li> -->
-
+					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/location') ? "class='active'" : ""; ?>><?= Html::anchor('/location','Location Search')?></li>
+					<li <?=($_SERVER['REQUEST_URI'] == '/blog') ? "class='active'" : ""; ?>><?= Html::anchor('/blog','Blog')?></li>
                          
 				</ul>
 			</section>

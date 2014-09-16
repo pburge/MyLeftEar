@@ -26,9 +26,12 @@ $(document).ready( function() {
   var numCols = 3;
 
   $.each(products, function(index, product) {
-    output += "<div class=\"large-4 small-6 columns\"> <img src=\"" + product.image +
-              "\"> <div class=\"panel\"> <h5>" + product.name +
-              "</h5> <h6 class=\"subheader\">" + product.price + "</h6> </div> </div> "
+    output += "<div class=\"large-4 small-6 columns\"> 
+				<img src=\"" + product.image + "\"> 
+             		<div class=\"panel\"> <h5>" + product.name + "</h5> 
+             		<h6 class=\"subheader\">" + product.price + "</h6> 
+             	</div> 
+             	</div> "
 
     // close and open new row when filled
 

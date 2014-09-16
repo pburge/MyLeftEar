@@ -4,9 +4,7 @@
 		<ul class="side-nav">
 			<li><?= Html::anchor('admin', 'Create a post') ?></li>
 			<li class='active'><?= Html::anchor('admin/blog', 'Blog posts') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
+			<!-- <li><?= Html::anchor('admin', 'another function') ?></li> -->
 		</ul>
 	</aside>
 
@@ -29,8 +27,8 @@
 						<td scope="row"><?= Html::anchor($post->admin_url(), $post->title)?></td>
 						<td scope="row"><?= Html::anchor($post->admin_url(), $limit_post)?></td>
 						<td scope="row">
-						<?= Html::anchor($post->admin_edit(), ' Edit', array('class' => 'button small fa fa-paragraph expand')); ?>
-						<?= Html::anchor($post->admin_delete(), ' Delete', array('class' => 'button small alert fa fa-trash-o expand'));?>
+						<?= Html::anchor($post->admin_edit(), '&nbsp;  Edit', array('class' => 'button small fa fa-paragraph expand')); ?>
+						<?= Html::anchor($post->admin_delete(), '&nbsp;  Delete', array('class' => 'button small alert fa fa-trash-o expand'));?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

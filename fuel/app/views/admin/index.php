@@ -4,9 +4,7 @@
 		<ul class="side-nav">
 			<li class='active'><?= Html::anchor('admin', 'Create a post') ?></li>
 			<li><?= Html::anchor('admin/blog', 'Blog posts') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
+			<!-- <li><?= Html::anchor('admin', 'another function') ?></li> -->
 		</ul>
 	</aside>
  	<div class="large-1 medium-1"></div>
@@ -15,7 +13,7 @@
 			<div class="row">
 				<div class="large-12 columns">
 
-					<h3>Editting post:</h3>
+					<h3>Create a post:</h3>
 					<br>
 					<?= Form::label('Category'); ?>
 
@@ -50,8 +48,3 @@
 		<?= Form::close(); ?>
 	</div>
  </div>
- <br>
- <br>
- <br>
- <br>
- <hr> <pre><?= var_export($admin); ?></pre>

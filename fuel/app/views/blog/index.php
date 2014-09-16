@@ -23,46 +23,41 @@
 			<br><br>
 			<div class="row show-for-small-only">
 				<div class="large-6 columns">
-					<?// Asset::img('arts/' . $post->post_img); ?>
-					<? if( DOCROOT.'img/arts/' . $post->post_img) : ?>
-					<? //Asset::img('arts/' . $post->post_img); ?>
+					<?if( $post->post_img) : ?>
+						<?= Asset::img('blog_imgs/' . $post->post_img); ?>
 					<? endif ; ?>
 					<br><br><br>
+
 				</div>
 			</div>
 			<div class="row show-for-medium-only">
 				<div class="large-6 columns">
-					<?// Asset::img('arts/' . $post->post_img); ?>
 					<?if( $post->post_img) : ?>
-					<? //Asset::img(DOCROOT.'img/arts/' . $post->post_img); ?>
+						<?= Asset::img('blog_imgs/' . $post->post_img); ?>
 					<? endif ; ?>
 					<br><br><br>
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-6 columns">
-					<p>  
-						<?= $limit_post ?>
-						<br>
-						<?= Html::anchor($post->url(), 'Read more', array('class' => 'button pull-right small show-for-medium-up')) ?> 
-					</p>
+					<p><?= nl2br($limit_post) ?></p><br>
+					<?= Html::anchor($post->url(), 'Read more', array('class' => 'button pull-right small show-for-medium-up')) ?> 
+					<?= Html::anchor($post->url(), 'Read more', array('class' => 'button small show-for-small-only expand')) ?> 
 				</div>
-				<div class="row show-for-large-up">
-					<div class="large-6 columns">
-						<?if( $post->post_img) : ?>
-							<?= Asset::img('blog_imgs/' . $post->post_img); ?>
-						<? endif ; ?>
-					</div>
+				<div class="large-6 columns show-for-large-up">
+					<?if( $post->post_img) : ?>
+						<?= Asset::img('blog_imgs/' . $post->post_img); ?>
+					<? endif ; ?>
 				</div>
 			</div>
 		</article>
 		<?
-			if(count($posts) % 1 == count($post) - 1 || count($posts) % 2 == count($post) - 1 ){
-				$one += 1;
-				if($one < $arrayCount){
-					echo '<hr>';
-				}
+		if(count($posts) % 1 == count($post) - 1 || count($posts) % 2 == count($post) - 1 ){
+			$one += 1;
+			if($one < $arrayCount){
+				echo '<hr>';
 			}
+		}
 		?>
 	<?php endif ;?>
 	<?php endforeach; ?>
