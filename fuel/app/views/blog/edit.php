@@ -3,7 +3,7 @@
  	<div class="large-1 medium-1 columns"><p></p></div>
 
 	<div class="large-10 medium-7 small-12 columns" role="content">
-		<?= Form::open(array('action' => 'admin/preview', 'enctype' => 'multipart/form-data', 'method' => 'post')); ?>
+		<?= Form::open(array('enctype' => 'multipart/form-data', 'method' => 'post')); ?>
 			<div class="row">
 				<div class="large-12 columns">
 

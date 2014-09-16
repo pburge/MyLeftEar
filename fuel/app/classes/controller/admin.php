@@ -16,6 +16,18 @@ class Controller_Admin extends Controller_Admin_Base
 		$this->template->content->admin = $this->admin;
 	}
 
+	public function get_blog()
+	{
+
+		$posts = Model_Blog_Post::find('all');
+
+		$this->template->content = View::forge('admin/blog');
+		$this->template->content->posts = $posts;
+
+
+	}
+
+
 	/*
 	*
 	*/
@@ -79,13 +91,9 @@ class Controller_Admin extends Controller_Admin_Base
 			// throw new Exception("Error Processing Request", 1);
 			 echo '<br><br><br><br>';
 			 echo 'CAUGHT EXCEPTION: ',  $e->getMessage(), "\n";
-			// Response::redirect('admin/#error-3');
 		}
 
 		$post->save();
-
-		// $this->template->content = View::forge('admin/blog_post');
-		// $this->template->content->post = $post;
 
 		// redirect to blog post view
 		Response::redirect($post->url());

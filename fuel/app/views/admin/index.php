@@ -1,12 +1,9 @@
-<?
-?>
-
 <div class="row">
 	<aside class="large-3 medium-4 small-12 columns">
 		<h5>Admin Management</h5>
 		<ul class="side-nav">
-			<li class='active'><?= Html::anchor('admin', 'Blog Functions') ?></li>
-			<li><?= Html::anchor('admin', 'another function') ?></li>
+			<li class='active'><?= Html::anchor('admin', 'Create a post') ?></li>
+			<li><?= Html::anchor('admin/blog', 'Blog posts') ?></li>
 			<li><?= Html::anchor('admin', 'another function') ?></li>
 			<li><?= Html::anchor('admin', 'another function') ?></li>
 			<li><?= Html::anchor('admin', 'another function') ?></li>

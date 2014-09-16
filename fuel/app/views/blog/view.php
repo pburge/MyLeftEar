@@ -31,7 +31,7 @@
 			</div>
 		</article>
 
-		<?php if($auth_user && $auth_user->group_id == 6) : ?>
+<!-- 		<?php if($auth_user && $auth_user->group_id == 6) : ?>
 			<div class="row">
 				<div class="large-6 columns">
 					<ul class="inline-list right">
@@ -42,7 +42,7 @@
 					</ul>
 				</div>
 			</div>
-		<?php endif ;?>
+		<?php endif ;?> -->
 
 <!-- 		<pre>
 			<hr>

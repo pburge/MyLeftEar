@@ -18,11 +18,6 @@ $(document).ready(function() {
 		$(this).find(".card").toggleClass("flipped");
 		return false;
 	});
-
-	document.getElementById("uploadBtn").onchange = function () {
-	    document.getElementById("uploadFile").value = this.value;
-	};
-
 	
 
 });
