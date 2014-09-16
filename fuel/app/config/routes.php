@@ -10,8 +10,11 @@ return array(
 	'profile/patron'               	=> 'profile/patron',
 
 	'blog/:url' 			          => 'blog/view',
-	'edit/:url'					=> 'blog/edit',
-	'delete/:url'					=> 'blog/delete',
+
+	// blog admin
+	'admin/article/:url/(:any)'         => 'admin/article/$2',
+	'admin/article/:url'                => 'admin/article/view',
+
 	
 	'artists' 			          => 'artists/index',
 	'artist/:url/:piece'	          => 'artist/view',

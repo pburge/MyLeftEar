@@ -120,7 +120,6 @@ if(isset($_GET["/"])){
 
                          
 				</ul>
-
 			</section>
 			</nav>
 		</div>

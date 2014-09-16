@@ -40,24 +40,39 @@ class Model_Blog_Post extends Orm\Model
 	            'unique' => true,     // property to require uniqueness or not
 	        ),
 	);
-	public function blog()
+
+	/*
+	* Admin blog funtions
+	* 
+	*/
+
+	public function admin_blog()
 	{
-		return 'blog';
+		return 'admin/blog';
 	}
+
+	public function admin_url()
+	{
+		return 'admin/article/' . $this->url;
+	}
+
+	public function admin_edit()
+	{
+		return 'admin/article/' . $this->url . '/edit';
+	}
+
+	public function admin_delete()
+	{
+		return 'admin/article/' . $this->url . '/delete';
+	}
+
+	/*
+	* Misc blog functionality
+	*/
 
 	public function url()
 	{
 		return 'blog/' . $this->url;
-	}
-
-	public function edit_url()
-	{
-		return 'edit/' . $this->url;
-	}
-
-	public function delete_url()
-	{
-		return 'delete/' . $this->url;
 	}
 
 	public static function get_desc($property,$value)
@@ -77,11 +92,11 @@ class Model_Blog_Post extends Orm\Model
 		$entry->save();
 	}
 
-	// public static function save()
-	// {
-	// 	return 'blog';
-
-	// }
+	public static function format_time($time)
+	{
+		$format = new DateTime($time);
+		return date_format($format, 'M d, Y h:ia');
+	}
 
 
 

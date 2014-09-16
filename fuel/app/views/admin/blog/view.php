@@ -1,13 +1,15 @@
 <div class="row">
-	<aside class="large-3 columns">
-		<h5>Categories</h5>
+	<aside class="large-3 medium-3 small-12 columns">
+		<h5>Admin Management</h5>
 		<ul class="side-nav">
-			<li><a href="#">Site News</a></li>
-			<li><a href="#">Featured Artist</a></li>
-			<li><a href="#">Art Exhibits</a></li>
-			<li><a href="#">Random Stuff</a></li>
+			<li><?= Html::anchor('admin', 'Create a post') ?></li>
+			<li><?= Html::anchor('admin/blog', 'Blog posts') ?></li>
+			<li><?= Html::anchor('admin', 'another function') ?></li>
+			<li><?= Html::anchor('admin', 'another function') ?></li>
+			<li><?= Html::anchor('admin', 'another function') ?></li>
 		</ul>
 	</aside>
+
 	<div class="small-9 columns" role="content">
 		<article>
 			<h2><?= $post->title ?></h2>

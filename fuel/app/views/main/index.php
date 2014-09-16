@@ -34,44 +34,55 @@
 
 			<div class="row">
 				<div class="large-3 small-6 columns">
-					<div class="flip"> 
+					<?= Asset::img('arts/cjvQ1Pm.jpg'); ?>
+					<!-- <div class="flip"> 
 						<div class="card"> 
 							<div class="face front"><?= Asset::img('arts/cjvQ1Pm.jpg'); ?></div> 
 							<div class="face back show-for-large-up">Back</div> 
 						</div> 
-					</div> 
-					<h6 class="panel show-for-small-only">Description</h6>
-					<h6 class="panel show-for-medium-only">Description</h6>
+					</div>  -->
+<!-- 					<h6 class="panel show-for-small-only">Description</h6>
+					<h6 class="panel show-for-medium-only">Description</h6> -->
+					<h6 class="panel text-center">Photography</h6>
 				</div>
 				<div class="large-3 small-6 columns">
-					<div class="flip"> 
+					<?= Asset::img('arts/xFK5DZs.jpg'); ?>
+					<!-- <div class="flip"> 
 						<div class="card"> 
 							<div class="face front"><?= Asset::img('arts/xFK5DZs.jpg'); ?></div> 
 							<div class="face back show-for-large-up">Back</div> 
 						</div> 
-					</div> 
-					<h6 class="panel show-for-medium-only">Description</h6>
-					<h6 class="panel show-for-small-only">Description</h6>
+					</div> --> 
+					<!-- <h6 class="panel show-for-medium-only">Description</h6>
+					<h6 class="panel show-for-small-only">Description</h6> -->
+					<h6 class="panel text-center">Paintings</h6>
+
 				</div>
 				<div class="large-3 small-6 columns">
-					<div class="flip"> 
+					<?= Asset::img('arts/wx4tFV9.jpg'); ?>
+					<!-- <div class="flip"> 
 						<div class="card"> 
 							<div class="face front"><?= Asset::img('arts/wx4tFV9.jpg'); ?></div> 
 							<div class="face back show-for-large-up">Back</div> 
 						</div> 
-					</div> 
-					<h6 class="panel show-for-medium-only">Description</h6>
-					<h6 class="panel show-for-small-only">Description</h6>
+					</div>  -->
+					<!-- <h6 class="panel show-for-medium-only">Description</h6>
+					<h6 class="panel show-for-small-only">Description</h6> -->
+					<h6 class="panel text-center">Prints</h6>
+
 				</div>
 				<div class="large-3 small-6 columns">
-					<div class="flip"> 
+					<?= Asset::img('arts/EAwnZ9x.jpg'); ?>
+					<!-- <div class="flip"> 
 						<div class="card"> 
 							<div class="face front"><?= Asset::img('arts/EAwnZ9x.jpg'); ?></div> 
 							<div class="face back show-for-large-up">Back</div> 
 						</div> 
-					</div> 
-					<h6 class="panel show-for-medium-only">Description</h6>
-					<h6 class="panel show-for-small-only">Description</h6>
+					</div>  -->
+					<!-- <h6 class="panel show-for-medium-only">Description</h6>
+					<h6 class="panel show-for-small-only">Description</h6> -->
+					<h6 class="panel text-center inverse">Digital Art</h6>
+
 				</div> 
 			</div>
 		</div>
