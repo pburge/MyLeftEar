@@ -19,3 +19,8 @@ ERROR - 2014-09-19 05:34:44 --> Parsing Error - syntax error, unexpected '?>' in
 ERROR - 2014-09-19 05:35:16 --> Parsing Error - syntax error, unexpected ':' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 33
 ERROR - 2014-09-19 05:38:24 --> Parsing Error - syntax error, unexpected ';', expecting ':' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 35
 ERROR - 2014-09-19 05:38:30 --> Parsing Error - syntax error, unexpected ';', expecting ':' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 35
+ERROR - 2014-09-19 12:11:04 --> Parsing Error - syntax error, unexpected '<' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 72
+ERROR - 2014-09-19 12:11:11 --> Parsing Error - syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 72
+ERROR - 2014-09-19 12:11:19 --> Parsing Error - syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 72
+ERROR - 2014-09-19 12:11:51 --> Parsing Error - syntax error, unexpected 'if' (T_IF) in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 74
+ERROR - 2014-09-19 12:12:02 --> Parsing Error - syntax error, unexpected ';', expecting ':' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 76

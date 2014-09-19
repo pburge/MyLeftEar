@@ -30,8 +30,8 @@
 			</div>
 
 			<div class="large-8 columns">
-				<?php if(!isset($pieces)) : ?>
-				<?php echo "this artist hasn't uploaded any pieces of art yet." ?>
+				<?php if(empty($pieces)) : ?>
+					<?php echo "this artist hasn't uploaded any pieces of art yet." ?>
 				<?php else :?>
 					<?php foreach($pieces as $piece) : ?>
 						<?php
@@ -55,7 +55,12 @@
 							}
 							$doc->documentElement->appendChild($f);
 							echo $doc->saveXML(); 
+							
+
+
 							?>
+
+
 					<?php endforeach ; ?>
 				<?php endif ;?>
 			</div>
