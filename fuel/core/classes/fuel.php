@@ -163,7 +163,7 @@ class Fuel
 		}
 		catch (\Exception $e)
 		{
-			date_default_timezone_set('EDT');
+			date_default_timezone_set('UTC');
 			throw new \PHPErrorException($e->getMessage());
 		}
 

@@ -56,6 +56,11 @@
 			$one += 1;
 			if($one < $arrayCount){
 				echo '<hr>';
+			}else
+			{
+				echo '<br>';
+				echo '<br>';
+				echo '<br>';
 			}
 		}
 		?>

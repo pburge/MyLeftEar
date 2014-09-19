@@ -30,30 +30,34 @@
 			</div>
 
 			<div class="large-8 columns">
-				<?php foreach($pieces as $piece) : ?>
-					<?php
-						$doc = new DOMDocument();
-						$doc->loadXML("<row />");
-						$f = $doc->createDocumentFragment();
-						$f->appendXML("<div class=\"large-4 small-6 columns\">".
-										Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats')).
-										"<div class=\"panel\">
-											<h5>". $piece->name ."</h5>
-											<h6 class=\"subheader\">$". $piece->price ."</h6>
-										</div>
-									</div>");
+				<?php if(!isset($pieces)) : ?>
+				<?php echo "this artist hasn't uploaded any pieces of art yet." ?>
+				<?php else :?>
+					<?php foreach($pieces as $piece) : ?>
+						<?php
+							$doc = new DOMDocument();
+							$doc->loadXML("<row />");
+							$f = $doc->createDocumentFragment();
+							$f->appendXML("<div class=\"large-4 small-6 columns\">".
+											Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats')).
+											"<div class=\"panel\">
+												<h5>". $piece->name ."</h5>
+												<h6 class=\"subheader\">$". $piece->price ."</h6>
+											</div>
+										</div>");
 
-						if ($pieces == $arrayCount - 1) 
-						{
-							for ($c = 0; $c < $numCols - 1 - $artists % $numCols; $c++) {
-								$f->appendXML("<div class='large-4 small-6 columns'></div>");
-								$doc->documentElement->appendChild($f);
-						  	}
-						}
-						$doc->documentElement->appendChild($f);
-						echo $doc->saveXML(); 
-						?>
-				<?php endforeach; ?>
+							if ($pieces == $arrayCount - 1) 
+							{
+								for ($c = 0; $c < $numCols - 1 - $artists % $numCols; $c++) {
+									$f->appendXML("<div class='large-4 small-6 columns'></div>");
+									$doc->documentElement->appendChild($f);
+							  	}
+							}
+							$doc->documentElement->appendChild($f);
+							echo $doc->saveXML(); 
+							?>
+					<?php endforeach ; ?>
+				<?php endif ;?>
 			</div>
 		</div> 
 	</div>
