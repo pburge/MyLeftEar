@@ -24,3 +24,7 @@ ERROR - 2014-09-19 12:11:11 --> Parsing Error - syntax error, unexpected 'if' (T
 ERROR - 2014-09-19 12:11:19 --> Parsing Error - syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 72
 ERROR - 2014-09-19 12:11:51 --> Parsing Error - syntax error, unexpected 'if' (T_IF) in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 74
 ERROR - 2014-09-19 12:12:02 --> Parsing Error - syntax error, unexpected ';', expecting ':' in /Applications/MAMP/htdocs/Dropbox/MyLeftEar/fuel/app/views/artist/index.php on line 76
+ERROR - 2014-09-19 19:41:23 --> Fatal Error - Interface 'Psr\Log\LoggerInterface' not found in /Applications/MAMP/htdocs/MyLeftEar/fuel/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+ERROR - 2014-09-19 19:42:37 --> 1049 - SQLSTATE[42000] [1049] Unknown database 'myleftear' in /Applications/MAMP/htdocs/MyLeftEar/fuel/core/classes/database/pdo/connection.php on line 113
+ERROR - 2014-09-19 21:34:45 --> Parsing Error - syntax error, unexpected 'is' (T_STRING), expecting ',' or ';' in /Applications/MAMP/htdocs/MyLeftEar/fuel/app/views/profile/index.php on line 53
+ERROR - 2014-09-19 21:35:03 --> Notice - Undefined variable: auth in /Applications/MAMP/htdocs/MyLeftEar/fuel/app/views/profile/index.php on line 52
