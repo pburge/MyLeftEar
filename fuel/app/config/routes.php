@@ -6,6 +6,11 @@ return array(
 	'register' 			          => 'auth/register',
 	'login'    			          => 'auth/login',
 	'logout'   			          => 'auth/logout',
+
+	// artist profile
+
+	
+
 	'profile' 	                    => 'profile/index',
 	'profile/patron'               	=> 'profile/patron',
 

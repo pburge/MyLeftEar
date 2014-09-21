@@ -6,7 +6,7 @@
 			<li><?= Html::anchor('profile/patron', 'Become a Patron') ?></li>
 		</ul>
 	</aside>
- 	<div class="large-1 medium-1"></div>
+		<div class="large-1 medium-1"></div>
 	<div class="large-8 medium-7 small-12 columns" role="content">
 		<form>
 			<fieldset>
@@ -43,9 +43,10 @@
 		<button type="submit" class='button small show-for-medium-up'>Save Info</button>
 		<button type="submit" class='button expand show-for-small-only'>Save Info</button>
 	</div>
- </div>
- <br>
- <br>
- <br>
- <br>
- <hr> <pre><?= var_export($auth_user); ?></pre>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <hr> <pre><?= var_export($auth_user); ?></pre> -->
