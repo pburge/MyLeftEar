@@ -6,12 +6,12 @@
 
 	<div class="large-4 columns">
 		<ul class="small-block-grid-2">
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-			<li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
+			<li><a href="#"><img src="http://placehold.it/500x200"/></a></li>
 		</ul>
 	</div>
 </div>
