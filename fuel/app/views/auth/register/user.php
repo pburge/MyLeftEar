@@ -1,8 +1,3 @@
-<?
-
-
-?>
-
 <div class="row">
 	<div class="large-12 columns">
 		<div class='large-1 medium-1 small-2 columns'><p></p></div>
