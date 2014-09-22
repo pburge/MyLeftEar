@@ -11,10 +11,6 @@
 
 /*Small screens*/
 @media only screen { /* Define mobile styles */
-	body{
-		/*background-color: tan;*/
-	}
-
 	.shop_icon_resize{
 		margin-top: -5px;
 		margin-right: 3px;
@@ -97,13 +93,21 @@
 		font-size: 15px;
 		color: #fff;
 	}
+
+	.inverse{
+		background: #333;
+		color: #fff;
+	}
 }
 
 /*Medium screens*/
 @media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
-	body{
-		/*background-color: cyan;*/
+	
+	.inverse{
+		background: #333;
+		color: #fff;
 	}
+
 	.red{
 		color: red;
 	}
@@ -213,9 +217,6 @@
 
 /*Large screens*/
 @media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
-	body{
-		background-color: white;
-	}
 
 	.inverse{
 		background: #333;

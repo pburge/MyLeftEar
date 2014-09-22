@@ -1,13 +1,3 @@
-<?
-	// PRIMARY NAV.PHP
-
-if(isset($_GET["/"])){
-	$action = $_GET["url"];
-}else{
-	$action = "";
-}
-?>
-
 <!DOCTYPE html>
 <html class="no-js" lang="en" >
 <head>
@@ -32,6 +22,7 @@ if(isset($_GET["/"])){
 </head>
 <body>
 	<header> 
+		<!-- FOR TABLETS AND DESKTOPS -->
 		<div class="row show-for-medium-up">
 			<div class="large-6 medium-3 small-6 columns logo">
 				<h1 class="bigger-h1-font mobile-bigger-h1">
@@ -55,6 +46,7 @@ if(isset($_GET["/"])){
 				</ul>
 			</div>
 		</div>
+		<!-- MOBILE VIEW -->
 		<div class="show-for-small-only">
 			<div class="row">
 				<div class="logo small-text-center">
@@ -74,7 +66,7 @@ if(isset($_GET["/"])){
 						<?php else: ?>
 						<li><h6><?= Html::anchor('login', '<i class="fa fa-sign-in"></i>Login') ?> or <?= Html::anchor('register', '<i class="fa fa-user"></i>Register') ?></h6></li>
 						<?php endif; ?>
-					<li class="move_icon_left"><h6><a href="?url=shopping_cart"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></h6></li>
+						<li><h6><?= Html::anchor('cart', '<i class="fa fa-shopping-cart"></i>Shopping Cart') ?></h6></li>
 					</ul>
 				</div>
 			</div>
@@ -85,13 +77,13 @@ if(isset($_GET["/"])){
 			</div>
 		</div>
 	</header>
-
+	<!-- NAVIGATION ELEMENTS -->
 	<div class="row raise">
 		<div class="large-12 columns sticky ff-raise">
 			<nav class="top-bar" data-topbar data-options="sticky_on: small">
 			<ul class="title-area">
 				<li class="name">
-					<!-- NEEDS TO BE HERE TO KEEP PROPER SPACING FOR MOBILE VIEW-->
+					<!-- NEEDS TO BE HERE TO KEEP PROPER SPACING FOR MOBILE VIEW. DO NOT REMOVE OR FILL -->
 				</li>
 				<!-- Remove the class "menu-icon" to get rid of menu icon. 
 				Take out "Menu" to just have icon alone. Keep it as is for now. -->
@@ -106,7 +98,6 @@ if(isset($_GET["/"])){
 					<li <?=($_SERVER['REQUEST_URI'] == '/commissions') ? "class='active'" : ""; ?>><?= Html::anchor('/commissions','Commission Work')?></li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/location') ? "class='active'" : ""; ?>><?= Html::anchor('/location','Location Search')?></li>
 					<li <?=($_SERVER['REQUEST_URI'] == '/blog') ? "class='active'" : ""; ?>><?= Html::anchor('/blog','Blog')?></li>
-                         
 				</ul>
 			</section>
 			</nav>
