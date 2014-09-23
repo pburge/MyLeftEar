@@ -4,6 +4,7 @@
 		<ul class="side-nav">
 			<li><?= Html::anchor('admin', 'Create a post') ?></li>
 			<li class='active'><?= Html::anchor('admin/blog', 'Blog posts') ?></li>
+			<li><?= Html::anchor('admin', 'Artist List') ?></li>
 			<!-- <li><?= Html::anchor('admin', 'another function') ?></li> -->
 		</ul>
 	</aside>

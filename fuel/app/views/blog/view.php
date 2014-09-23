@@ -37,7 +37,4 @@
 			</div>
 		</article>
 	</div>
-
-
-
 </div>
