@@ -43,8 +43,8 @@
 
 			</div>
 
-			<a href='#' type="submit" class='button expand show-for-small-only'>Preview Post</a>
-			<button type="submit" class='button pull-right small show-for-medium-up'>Preview Post</button>
+			<a href='#' type="submit" class='button expand show-for-small-only'>Publish Post</a>
+			<button type="submit" class='button pull-right small show-for-medium-up'>Publish Post</button>
 
 		<?= Form::close(); ?>
 	</div>

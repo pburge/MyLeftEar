@@ -15,6 +15,7 @@
 						<li><a href="/artists" title="">Artists</a></li>
 						<li><a href="/product/list" title="">Mediums</a></li>
 						<li><a href="/commissions" title="">Commissions</a></li>
+						<li><a title="">Contact Us!</a></li>
 					</ul>
 				</div>
 				<div class="large-4 medium-4 small-12 columns">

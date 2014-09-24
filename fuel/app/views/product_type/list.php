@@ -35,11 +35,6 @@
 					<h6 class="subheader">$000.00</h6>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="large-9 medium-9 small-12 columns">
-		<div class="row">
 
 			<div class="large-4 medium-6 small-6 columns">
 				<img src="http://placehold.it/500x500&text=Thumbnail">
@@ -49,6 +44,14 @@
 				</div>
 			</div>
 			<div class="large-4 medium-6 small-6 end columns">
+				<img src="http://placehold.it/500x500&text=Thumbnail">
+				<div class="panel">
+					<h5>Item Name</h5>
+					<h6 class="subheader">$000.00</h6>
+				</div>
+			</div>
+
+			<div class="large-4 medium-6 small-6 columns">
 				<img src="http://placehold.it/500x500&text=Thumbnail">
 				<div class="panel">
 					<h5>Item Name</h5>
