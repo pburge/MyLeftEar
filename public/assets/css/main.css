@@ -269,7 +269,9 @@
 	.top-bar{
 		background-color: #a4a4a4; 
 	}
-
+	.top-bar-section ul li.active > a {
+	  background: red;
+	  color: white; }
 }
 
 /*XLarge screens*/
