@@ -2,6 +2,7 @@
 	<div class="large-12 columns">
 		<div class='large-1 medium-1 small-2 columns'><p></p></div>
 		<div class="large-4 medium-5 small-10 columns">
+			<br>
 			<h3 class=''>Register for free today!</h3>
 			<ul class='text-left no-bullet'>
 				<li>Place holder stuff.</li>
@@ -16,13 +17,14 @@
 		<div class="large-7 medium-6 small-12 columns">
 			<br>
 			<?php echo Form::open(['id' => 'body_form']) ?>
+			<br>
 				<div class="large-10 medium-10 small-11">
 					<div class="row">
 						<div class="large-4 small-4 columns">
 							<label for="right-label" class="right inline">Username</label>
 						</div>
 						<div class="large-8 small-8 columns">
-							<input name='email' type="email" class="form-control" placeholder="email">
+							<input name='email' type="email" class="form-control" placeholder="email" autofocus>
 						</div>
 					</div>
 				</div>

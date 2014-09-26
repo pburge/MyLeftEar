@@ -17,6 +17,12 @@ class Controller_Profile extends Controller_App
 		$this->template->content = View::forge('profile/patron');
 	}
 
+	public function get_profile()
+	{
+		$this->template->content = View::forge('artist/profile');
+
+	}
+
 
 	
 }

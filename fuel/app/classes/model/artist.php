@@ -107,5 +107,10 @@ class Model_Artist extends Orm\Model
 	}
 
 
+	public static function get_by($property,$value)
+	{
+		return static::query()->where($property, $value)->get_one();
+	}
+
 
 }

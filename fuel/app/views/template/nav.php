@@ -27,6 +27,7 @@
 			<div class="large-6 medium-3 small-6 columns logo">
 				<h1 class="bigger-h1-font mobile-bigger-h1">
 					<a href="/">MY<span class='red'>LEFT</span>EAR</a>
+					<!-- <br><h6>Local Artists, Global Collectors</h6> -->
 				</h1>
 			</div>
 			<div class="large-6 medium-9 small-6 columns drop mobile-line-break">
@@ -36,6 +37,8 @@
 							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('profile', $auth_user->username) ?></h6></li>
 						<? elseif($auth_user->group_id == 6) : ?>
 							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('admin', $auth_user->username) ?></h6></li>
+						<? elseif($auth_user->group_id == 7) : ?>
+							<li><h6><i class="fa fa-male"></i> Hello, <?= Html::anchor('profile', $auth_user->username) ?></h6></li>
 						<? endif ; ?>
 					<li><h6><i class="fa fa-power-off"></i> <?= Html::anchor('logout', 'Logout') ?> </h6></li>
 					<?php else: ?>

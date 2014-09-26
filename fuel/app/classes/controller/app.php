@@ -15,6 +15,7 @@ abstract class Controller_App extends Controller_Template
 	 */
 	protected $user = null;
 	protected $admin = null;
+	protected $artist = null;
 
 	/**
 	 *
@@ -26,6 +27,7 @@ abstract class Controller_App extends Controller_Template
 		$this->_init_auth();
 		$this->_init_user();
 		$this->_init_admin();
+		$this->_init_artist();
 
 		$this->init_template();		
 	}
@@ -46,6 +48,13 @@ abstract class Controller_App extends Controller_Template
 		return $this->admin !== null;
 	}
 
+	/**
+	 * @return bool
+	 */
+	protected function is_artist()
+	{
+		return $this->artist !== null;
+	}
 
 	/**
 	 * rediect user to login page if not authenticated
@@ -98,6 +107,17 @@ abstract class Controller_App extends Controller_Template
 		if ($this->is_authenticated())
 		{
 			$this->admin = Model_Admin::get_by('user_id', $this->user->id);
+		}
+	}
+
+	/**
+	 *
+	 */
+	private function _init_artist()
+	{
+		if ($this->is_authenticated())
+		{
+			$this->artist = Model_Artist::get_by('user_id', $this->user->id);
 		}
 	}
 }

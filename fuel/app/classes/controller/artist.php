@@ -43,4 +43,11 @@ class Controller_Artist extends Controller_App
 
 	}
 
+	// public function get_profile()
+	// {
+
+	// 	$this->template->content = View::forge('artist/profile/index');
+	// 	$this->template->content->artist = $this->artist;
+	// }
+
 }

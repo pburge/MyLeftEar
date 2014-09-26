@@ -8,11 +8,12 @@ return array(
 	'logout'   			          => 'auth/logout',
 
 	// artist profile
-
-	
+	// 'artist/profile'				=> 'artist/profile',
 
 	'profile' 	                    => 'profile/index',
 	'profile/patron'               	=> 'profile/patron',
+	'profile/artist'               	=> 'artist/profile/index',
+
 
 	'blog/:url' 			          => 'blog/view',
 
