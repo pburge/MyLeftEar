@@ -271,7 +271,9 @@
 	}
 	.top-bar-section ul li.active > a {
 	  background: red;
-	  color: white; }
+	  color: white; 
+
+	}
 }
 
 /*XLarge screens*/
