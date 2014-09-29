@@ -24,13 +24,13 @@
 	<header> 
 		<!-- FOR TABLETS AND DESKTOPS -->
 		<div class="row show-for-medium-up">
-			<div class="large-6 medium-3 small-6 columns logo">
-				<h1 class="bigger-h1-font mobile-bigger-h1">
+			<div class="large-6 medium-5 small-6 columns logo">
+				<h1 class="bigger-h1-font">
 					<a href="/">MY<span class='red'>LEFT</span>EAR</a>
-					<!-- <br><h6>Local Artists, Global Collectors</h6> -->
+					<h6 class='subheader raise'>Local Artists &nbsp; Global Collectors</h6>
 				</h1>
 			</div>
-			<div class="large-6 medium-9 small-6 columns drop mobile-line-break">
+			<div class="large-6 medium-7 small-6 columns drop mobile-line-break">
 				<ul class="inline-list right move_icon_left">
 					<?php if (isset($auth_user)): ?>
 						<? if ($auth_user->group_id == 3) :?>
@@ -55,9 +55,10 @@
 				<div class="logo small-text-center">
 					<h1 class="mobile-bigger-h1">
 						<a href="/">MY<span class='red'>LEFT</span>EAR</a>
+						<h6 class='subheader raise'>Local Artists &nbsp; Global Collectors</h6>
 					</h1>
 				</div>
-				<div class="mobile-drop">
+				<div class="">
 					<ul class="center mobile-bigger-font move_icon_left">
 						<?php if (isset($auth_user)): ?>
 						<? if ($auth_user->group_id == 3) :?>
@@ -74,15 +75,15 @@
 				</div>
 			</div>
 		</div>
-		<div class='row'>
+<!-- 		<div class='row'>
 			<div class='large-12 column'>
 				<p class='border-no-hr'></p>
 			</div>
-		</div>
+		</div> -->
 	</header>
 	<!-- NAVIGATION ELEMENTS -->
-	<div class="row raise">
-		<div class="large-12 columns sticky ff-raise">
+	<div class="row">
+		<div class="large-12 columns sticky raise ff-raise">
 			<nav class="top-bar" data-topbar data-options="sticky_on: small">
 			<ul class="title-area">
 				<li class="name">

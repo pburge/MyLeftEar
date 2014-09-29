@@ -27,7 +27,6 @@
 						<?= Asset::img('blog_imgs/' . $post->post_img); ?>
 					<? endif ; ?>
 					<br><br><br>
-
 				</div>
 			</div>
 			<div class="row show-for-medium-only">
@@ -58,8 +57,6 @@
 				echo '<hr>';
 			}else
 			{
-				echo '<br>';
-				echo '<br>';
 				echo '<br>';
 			}
 		}

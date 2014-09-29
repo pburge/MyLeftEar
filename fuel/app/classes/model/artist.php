@@ -13,6 +13,7 @@ class Model_Artist extends Orm\Model
 		'user_id',
 		'created_at',
 		'updated_at',
+		'photo',
 	);
 
 	/**

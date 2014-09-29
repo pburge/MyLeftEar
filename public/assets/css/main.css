@@ -97,6 +97,8 @@
 	.inverse{
 		background: #333;
 		color: #fff;
+		margin-top: 0px;
+		border: 0px;
 	}
 }
 
@@ -106,6 +108,8 @@
 	.inverse{
 		background: #333;
 		color: #fff;
+		margin-top: 0px;
+		border: 0px;
 	}
 
 	.red{
@@ -115,9 +119,21 @@
 		color: black;
 		font-family: logo, helvetica;
 	}
+
+
 	.raise{
-		margin-top: -20px;
+		margin-top: -15px;
 	}
+	.drop{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 21px;
+	}
+	.space {
+		margin: 0 -30px;
+	}
+
+
 	.shop_icon_resize{
 		margin-top: -5px;
 		margin-right: 3px;
@@ -185,6 +201,12 @@
 	.inverse{
 		background: #333;
 		color: #fff;
+		margin-top: 0px;
+		border: 0px;
+	}
+
+	.inverse > h2 {
+		color: #fff;
 	}
 
 	.red{
@@ -195,7 +217,7 @@
 		font-family: logo, helvetica;
 	}
 	.raise{
-		margin-top: -20px;
+		margin-top: -15px;
 	}
 	.shop_icon_resize{
 		margin-top: -5px;
@@ -213,7 +235,9 @@
 		display: inline;
 	}
 	.drop{
-		margin-top: 32px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 53px;
 	}
 
 	.move_icon_left > li > h6 > a > i {
@@ -264,6 +288,27 @@
 	.icon-color > li > i > a{
 		font-size: 15px;
 		color: #fff;
+	}
+
+	.white-anchor{
+		color:white;
+	}
+
+	.button.alert:hover, .button.alert:focus {
+		background-color: #C23030;
+	}
+
+	.button.success:hover, .button.success:focus {
+		background-color: #1C6B3F;
+	}
+
+	.top-bar-section li.active:not(.has-form) a:not(.button) {
+		background: #BA0000;
+
+	}
+
+	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+		background: #860F0F;
 	}
 
 /*	.top-bar{
