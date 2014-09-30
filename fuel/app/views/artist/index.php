@@ -40,7 +40,9 @@
 				<?php else :?>
 					<?php foreach($pieces as $piece) : ?>
 						<?php
-							$art_piece = Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats'));
+							// $art_piece = Html::anchor($piece->url(),Html::img('http://lorempixel.com/500/500/cats'));
+							$art_piece = Html::anchor($piece->url(),Html::img('assets/img/pieces/'.$piece->image));
+
 							$doc = new DOMDocument();
 							$doc->loadXML("<row />");
 							$f = $doc->createDocumentFragment();

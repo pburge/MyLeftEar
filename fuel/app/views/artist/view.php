@@ -10,7 +10,8 @@
 				<img src="http://placehold.it/970x400&text=Image"><br>
 			</div>
 			<div class="large-8 columns show-for-large-up">
-				<img src="http://placehold.it/700x500&text=Image">
+				<!-- <img src="http://placehold.it/700x500&text=Image"> -->
+				<?php echo Html::img('assets/img/pieces/'.$piece->image); ?>
 			</div>
 			<div class="large-4 columns">
 				<div class="show-for-small-only">
@@ -34,8 +35,8 @@
 					</ul>
 					<h6 class="subheader">Price or something</h6>
 					<h6 class="">$<?= $piece->price ?> USD</h6>
-
-					<a href="#" class="small button large-12">Buy now!</a>
+					<br><br>
+					<a href="#" class="small button large-12">Add to cart</a>
 				</div>
 <!-- 				<div class="row">
 					<div class="large-12 columns">
